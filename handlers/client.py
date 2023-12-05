@@ -11,7 +11,7 @@ class FSM_goods(StatesGroup):
 async def commands_start(message : types.Message):
     "функция старта"
     try:
-        await bot.send_message(message.from_user.id, 'Готов к работе')
+        await bot.send_message(message.from_user.id, 'Готов к работе', reply_markup=kb_client)
         await message.delete()
     except:
         await message.reply("Общение с ботов в ЛС.")
